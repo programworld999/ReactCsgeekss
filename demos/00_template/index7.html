@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - 7 (Event listener)</title>
+
+  <link rel="stylesheet" href="/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+
+    <div id="app" class="container col-12 text-center bg-success"></div>
+<hr>
+    <div id="console" class="container col-12 text-center bg-primary">
+<h6>Console</h6>
+</br>
+<div id="consoleIn" class="text-danger"></div></div>
+
+<!------ React Script ----->
+  <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+
+<!---- End Of React Script ---->
+
+    <script type="text/babel">
+
+var App = React.createClass({
+
+render: function(){
+return (<div>
+<h4><b>App : </b> {this.props.name}</h4>
+<button onClick={this.action}>Action</button>
+</div>
+);
+
+},
+
+action: function(){
+document.getElementById("consoleIn").innerHTML += "</br><p>Click</p>";
+}
+
+});
+
+
+ReactDOM.render(
+<App name="Event Handler (onclick)" />,
+document.getElementById("app")
+);
+
+
+
+
+ </script>
+
+</body>
+</html>

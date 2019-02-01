@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - 3</title>
+
+  <link rel="stylesheet" href="/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+
+    <div id="app" class="container col-12 text-center bg-success"></div>
+
+<!------ React Script ----->
+  <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+
+<!---- End Of React Script ---->
+
+    <script type="text/babel">
+
+const app = <h2>Hello</h2>;
+//you can use only one HTML element by doing this 
+
+const apps = (
+<div>
+<h2>Hello</h2>
+<p>This Is My First <b>React</b> app</p>
+</div>
+);
+//and you can use only one HTML element by doing this
+
+/*
+var Apk = React.createClass({
+render: function(){
+            return (<div>
+<h1>HelloWorld</h1>
+<ul>
+<li>Cat</li>
+<li>Dog</li>
+<li>Bird</li>
+</ul>
+</div>
+
+);
+}
+});
+
+
+*/
+
+  ReactDOM.render(apps , document.getElementById('app'));
+
+     </script>
+
+</body>
+</html>

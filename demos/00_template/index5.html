@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React - 5</title>
+
+  <link rel="stylesheet" href="/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+
+    <div id="app" class="container col-12 text-center bg-success"></div>
+<hr>
+    <div id="apps" class="container col-12 text-center bg-primary"></div>
+
+<!------ React Script ----->
+  <script src="../../js/react.min.js"></script>
+    <script src="../../js/react-dom.min.js"></script>
+    <script src="../../js/browser.min.js"></script>
+
+<!---- End Of React Script ---->
+
+    <script type="text/babel">
+
+var App = React.createClass({
+render: function(){
+return (<div>
+<h4><b>App : </b> {this.props.name}</h4>
+<ul>
+<li>{this.props.data.animal1}</li>
+<li>{this.props.data.animal_2}</li>
+<li>{this.props.data.animal3}</li>
+</ul>
+</div>
+);
+}
+});
+
+let animals = {animal1 : 'Kitty', animal_2: 'Poppy', animal3: 'lion Cub'};
+ReactDOM.render(
+<App name="3 Favourite Animal" data={animals}/>,
+document.getElementById("app")
+);
+
+
+var Cars = React.createClass({
+render: function(){
+return (<div>
+<h1> <strong>(Props Use)</strong></h1>
+<h4><b>Car Name : {this.props.name}</b></h4>
+<h5>{this.props.speed}</h5>
+<hr></hr>
+</div>
+);
+}
+
+});
+
+
+ReactDOM.render(
+<div>
+<Cars name="Lamborghini" speed="50km/h" />
+<Cars name="Bugatti" speed="40km/h" />
+<Cars name="Ferrari" speed="36km/h" />
+
+</div>,
+
+document.getElementById("apps")
+
+);
+
+ </script>
+
+</body>
+</html>
